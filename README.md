@@ -72,7 +72,7 @@ TILMedia ClaRa = 1.8.0
 
 5. Consumer (IT Container)
 
-![](./pictures/Hy4GreenIT.png)
+![](./Pictures/Hy4GreenIT.png)
 
 ### 1. Solar Panel
 
