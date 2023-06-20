@@ -113,34 +113,9 @@ This component represents a feed in station where hydrogen is produced with an e
 
 Adapter has been self-modified because the **output of electrolyzer is real gas with 4 parameters (`h`, `p`, `xi`, `m_flow`) and input of fuel cell stack is ideal gas with 4 parameters (`T`, `p`, `xi`, `m_flow`).** This is no adapter which can transfer real gas with `h` to ideal gas with `T`.
 
-Details about this issue please see: [Question/problem with gas types · Issue #7](https://github.com/TransiEnt-official/transient-lib/issues/7)
+Details about this problem please see this **Issue**: [Question/problem with gas types · Issue #7](https://github.com/TransiEnt-official/transient-lib/issues/7)
 
-The main modification is the equation (line 86 - 107):
-
-```Modelica
-equation
-  // _____________________________________________
-  //
-  //           Characteristic Equations
-  // _____________________________________________
-
-  gasPortIn.p=gasPortOut.p;
-  gasPortIn.m_flow+gasPortOut.m_flow=0;
-
-  //if noEvent(gasPortIn.m_flow>0) then
-    gasPortIn.h_outflow=gasOut.h;
-    gasPortOut.T_outflow=gasIn.T;
-
-  //else
-    //gasPortOut.h_outflow=inStream(gasPortIn.h_outflow);
-  //end if;
-
-  gasPortIn.xi_outflow=inStream(gasPortOut.xi_outflow);
-
-  gasPortOut.xi_outflow=inStream(gasPortIn.xi_outflow);
-
- // gasIn.T=gasOut.T;
-```
+A **Pull Request** has been created to cover this gap: [feat add the adapter Real_ph_to_Ideal_pT.mo by wangzizhe · Pull Request #10 · TransiEnt-official](https://github.com/TransiEnt-official/transient-lib/pull/10)
 
 ### 4. Fuel Cell Stack
 
