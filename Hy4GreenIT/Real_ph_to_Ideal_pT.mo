@@ -142,6 +142,6 @@ Documentation(info="<html>
 <h4><span style=\"color: #008000\">9. References</span></h4>
 <p>(no remarks) </p>
 <h4><span style=\"color: #008000\">10. Version History</span></h4>
-<p>Model created by Carsten Bode (c.bode@tuhh.de) on Tue Apr 05 2016 </p>
+<p>Model created by Zizhe Wang (zizhe.wang@tu-dresden.de) on Tue May 16 2023 </p>
 </html>"));
 end Real_ph_to_Ideal_pT;
